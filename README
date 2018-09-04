@@ -1,0 +1,19 @@
+Repository contains simulation of some solution for Rendezvous problem. Definition of this issue is following:
+
+Two agent are placed randomly in unknown teritory. Their main purpose is to meet in the shortest possible time. Both of them have some knowledge about initial distance between them, their velocity and radius of visibility. Moving space is two dimensional.
+
+Above definition of this problem is suited to prepared solutions. Actual work represents 5 solutions:
+ - Kissing circles 
+ - Kissing circles with limited resources
+ - Unknown initial distance between agents
+ - Sequence cover
+ - Sequence cover optimized
+
+"graphic" folder contains html/js version of algorithms. It allows to study road of agents in different conditions on simple canvas.
+"samples" folder contains algorithms implemented in C. It is a terminal program that allows to run many samples in short time.
+
+References:
+ - https://en.wikipedia.org/wiki/Rendezvous_problem
+ - Edward J. Anderson, Sándora P. Fekete: Asymetric Rendezvous on the Plane, 1998
+ - Andrew Collins, Jurek Czyzowicz, Leszek Ga˛sieniec, Arnaud Labourel: Tell Me Where I Am So I Can Meet You Sooner. ICALP (2) 2010: 502-514
+ - Steve Alpern: Hide and Seek Games, Seminar, Institut fur Hohere Studien, Wien, 1976.

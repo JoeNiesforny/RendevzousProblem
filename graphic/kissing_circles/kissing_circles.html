@@ -1,0 +1,64 @@
+<html>
+    <style>
+        canvas{
+            border: solid 1px #607D8B;
+        }
+        td {
+            padding: 1%;
+        }
+        input[type=number] {
+            width: 50%;
+        }
+    </style>
+    <script type="text/javascript" src="kissing_circles.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</html>
+<body onload="loadCanvas()">
+    <form>
+        <div>Algorytm całujących się kół</div>
+        <div>Czas
+        <input type="number" name="timer" id="timer" value="0" min="0" disabled=true/>
+        ms. </div>
+        <div>Dystans między początkowymi pozycjami graczy
+        <input type="number" name="distBegin" id="distBegin" value="0" min="0" disabled=true/>
+        px. </div>
+        <div>Dystans między graczami
+        <input type="number" name="dist" id="dist" value="0" min="0" disabled=true/>
+        px. </div>
+    </form>
+    <canvas id="mainCanvas"></canvas>
+    <table>
+        <tr>
+            <td>
+                <div>Gracz 1 (niebieski)</div>
+                <form>
+                    <div>x0 <input type="number" id="p1.x0"/> px</div>
+                    <div>y0 <input type="number" id="p1.y0"/> px</div>
+                    <div>Prędkość <input type="number" id="p1.speed" min="0" max="1000"/> px/s</div>
+                    <div>Dystans <input type="number" id="p1.length" min="0" disabled=true/> px</div>
+                </form>
+            </td>
+            <td>
+                <div>Gracz 2 (czerwony)</div>
+                <form>
+                    <div>x0 <input type="number" id="p2.x0"/> px</div>
+                    <div>y0 <input type="number" id="p2.y0"/> px</div>
+                    <div>Prędkość <input type="number" id="p2.speed" min="0" max="1000"/> px/s</div>
+                    <div>Dystans <input type="number" id="p2.length" min="0" disabled=true/> px</div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <input type="button" onclick="start()" value="Start"/>
+                    <div style="padding: 5%;"></div>
+                    <input type="button" onclick="stop()" value="Pauza"/>
+                    <div style="padding: 5%;"></div>
+                    <input type="button" onclick="set()" value="Ustaw"/>
+                    <div style="padding: 5%;"></div>
+                    <input type="button" onclick="init()" value="Nowe ustawienia"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
